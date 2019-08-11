@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name"> NYC Pizza</string>
+    <string name="talkback_button_check">isButton</string>
+    <string name="talkback_custom_action">customAction</string>
+    <string name="talkback_custom_action_place_order">place order</string>
+</resources>

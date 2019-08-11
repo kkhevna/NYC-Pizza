@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/customizeImageView"
+        android:layout_width="215dp"
+        android:layout_height="201dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pepperoni_slice" />
+
+    <RelativeLayout
+        android:layout_below="@id/customizeImageView"
+        android:id="@+id/SizeLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size"/>
+
+        <TextView
+            android:id="@+id/sizeValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="45dp"
+            android:gravity="right"
+            android:layout_toRightOf="@id/sizeTextView"
+            android:text="Large" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/sizeView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:layout_below="@id/SizeLayout"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#9BA4AA" />
+
+
+    <RelativeLayout
+        android:layout_below="@id/sizeView"
+        android:id="@+id/SauceLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sauceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sauce"/>
+
+        <TextView
+            android:id="@+id/sauceValueTextView"
+            android:layout_toRightOf="@id/sauceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="45dp"
+            android:gravity="right"
+            android:text="Tomato"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/sauceView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:layout_below="@id/SauceLayout"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#9BA4AA"/>
+
+
+    <RelativeLayout
+        android:layout_below="@id/sauceView"
+        android:id="@+id/toppingsLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/toppingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toppings"/>
+
+        <TextView
+            android:id="@+id/toppingsValueTextView"
+            android:layout_toRightOf="@id/toppingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="45dp"
+            android:gravity="right"
+            android:text="Pepperoni, Pineapple"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/toppingsView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:layout_below="@id/toppingsLayout"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#9BA4AA"/>
+
+
+
+    <RelativeLayout
+        android:layout_below="@id/toppingsView"
+        android:id="@+id/quantityLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Quantity"/>
+
+        <ImageView
+            android:id="@+id/quantityMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_maximize_24px"
+            android:layout_marginLeft="245dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/quantityTextView"
+            />
+
+        <TextView
+            android:id="@+id/quantityValueTextView"
+            android:layout_toRightOf="@id/quantityMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="1"/>
+
+        <ImageView
+            android:id="@+id/quantityAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/quantityValueTextView"
+            app:srcCompat="@drawable/ic_baseline_add_24px" />
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/quantityView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:layout_below="@id/quantityLayout"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#9BA4AA"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:layout_below="@id/quantityView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Order Total : Free "/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:text="Place Order"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff" />
+
+
+</RelativeLayout>
