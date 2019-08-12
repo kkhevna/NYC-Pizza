@@ -22,6 +22,8 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:clickable="false"
+            android:focusable="false"
             android:id="@+id/sizeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,6 +32,8 @@
         <TextView
             android:id="@+id/sizeValueTextView"
             android:layout_width="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="100dp"
@@ -62,12 +66,16 @@
 
         <TextView
             android:id="@+id/sauceTextView"
+            android:clickable="false"
+            android:focusable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sauce"/>
 
         <TextView
             android:id="@+id/sauceValueTextView"
+            android:clickable="false"
+            android:focusable="false"
             android:layout_toRightOf="@id/sauceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,11 +110,15 @@
         <TextView
             android:id="@+id/toppingsTextView"
             android:layout_width="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
             android:layout_height="wrap_content"
             android:text="Toppings"/>
 
         <TextView
             android:id="@+id/toppingsValueTextView"
+            android:clickable="false"
+            android:focusable="false"
             android:layout_toRightOf="@id/toppingsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,6 +155,8 @@
 
         <TextView
             android:id="@+id/quantityTextView"
+            android:clickable="false"
+            android:focusable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -152,12 +166,10 @@
             android:id="@+id/quantityMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_baseline_maximize_24px"
+            app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24px"
             android:layout_marginLeft="245dp"
-            android:layout_marginTop="8dp"
             android:layout_marginRight="5dp"
-            android:layout_toRightOf="@id/quantityTextView"
-            />
+            android:layout_toRightOf="@id/quantityTextView" />
 
         <TextView
             android:id="@+id/quantityValueTextView"
@@ -175,7 +187,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/quantityValueTextView"
-            app:srcCompat="@drawable/ic_baseline_add_24px" />
+            app:srcCompat="@drawable/ic_baseline_add_circle_outline_24px" />
 
 
 
@@ -203,6 +215,7 @@
         android:text="Order Total : Free "/>
 
     <Button
+        android:id="@+id/orderButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@color/yellow"

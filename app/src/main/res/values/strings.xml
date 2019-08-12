@@ -3,4 +3,14 @@
     <string name="talkback_button_check">isButton</string>
     <string name="talkback_custom_action">customAction</string>
     <string name="talkback_custom_action_place_order">place order</string>
+    <string name="back">back</string>
+    <string name="talkback_custom_action_go_to_previous_screen">go to previous screen</string>
+    <string name="talkback_custom_action_add_or_change_toppings">add or change toppings</string>
+    <string name="talkback_custom_action_change_size">change size</string>
+    <string name="talkback_custom_action_change_sauce">change sauce</string>
+    <string name="talkback_custom_action_order">order</string>
+    <string name="talkback_custom_action_review_order">review order</string>
+    <string name="talkback_custom_action_exit_and_place_order">exit and place order</string>
+    <string name="talkback_custom_action_select">select</string>
+    <string name="talkback_custom_action_unselect">un select</string>
 </resources>

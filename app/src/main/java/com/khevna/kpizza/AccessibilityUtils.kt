@@ -6,6 +6,10 @@ import android.support.v4.view.ViewCompat
 import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat
 import android.view.View
 import android.view.accessibility.AccessibilityEvent
+import android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction
+import android.R
+
+
 
 class AccessibilityViewConfig (private val view: View) {
     var isButton = false
@@ -35,11 +39,12 @@ class AccessibilityViewConfig (private val view: View) {
 
             override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
                 super.onInitializeAccessibilityNodeInfo(host, info)
-                if (isButton) {
-                    info.extras.putBoolean(host.resources.getString(R.string.talkback_button_check), true)
-                }
                 if (action.isNotEmpty()) {
-                    info.extras.putString(host.resources.getString(R.string.talkback_custom_action), action)
+                    val description = action
+                    val customClick = AccessibilityNodeInfoCompat.AccessibilityActionCompat(
+                        AccessibilityNodeInfoCompat.ACTION_CLICK, description
+                    )
+                    info.addAction(customClick)
                 }
             }
         })
