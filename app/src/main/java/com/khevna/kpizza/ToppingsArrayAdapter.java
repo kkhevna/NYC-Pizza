@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -48,14 +49,21 @@ public class ToppingsArrayAdapter extends ArrayAdapter<Toppings> {
         final Toppings data = objects.get(position);
         final ViewHolder viewHolder = new ViewHolder();
 
-        viewHolder.textView = (TextView) convertView.findViewById(R.id.toppingName);
-        viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.toppingCheckBox);
+        viewHolder.textView =  convertView.findViewById(R.id.toppingName);
+        viewHolder.checkBox =  convertView.findViewById(R.id.toppingCheck);
 
         viewHolder.textView.setText(data.getToppings());
 
-        viewHolder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                data.setChecked(isChecked);
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (data.isChecked) {
+                    data.setChecked(false);
+                    viewHolder.checkBox.setImageResource(R.drawable.baseline_uncheck);
+                } else {
+                    data.setChecked(true);
+                    viewHolder.checkBox.setImageResource(R.drawable.ic_baseline_check_24px);
+                }
             }
         });
 
@@ -69,7 +77,7 @@ public class ToppingsArrayAdapter extends ArrayAdapter<Toppings> {
     private class ViewHolder {
 
         TextView textView;
-        CheckBox checkBox;
+        ImageView checkBox;
     }
 
     public ArrayList<Toppings> getObjects() {
