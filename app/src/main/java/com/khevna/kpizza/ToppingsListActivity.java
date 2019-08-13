@@ -52,6 +52,12 @@ public class ToppingsListActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        doneButton.setContentDescription("Done");
+
+        AccessibilityUtils.configureViewAccessibility(doneButton)
+                .setCustomAction(R.string.talkback_custom_action_exit_and_place_order)
+                .apply();
     }
 
     private String getCheckedItems() {
