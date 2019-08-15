@@ -66,9 +66,18 @@ public class ToppingsArrayAdapter extends ArrayAdapter<Toppings> {
                 if (data.isChecked) {
                     data.setChecked(false);
                     viewHolder.checkBox.setImageResource(R.drawable.baseline_uncheck);
+                    AccessibilityUtils.configureViewAccessibility(v)
+                            .setCustomAction(R.string.talkback_custom_action_select )
+                            .apply();
+                    v.announceForAccessibility(context.getString(R.string.talkback_custom_topping_unselected, viewHolder.textView.getText()));
                 } else {
                     data.setChecked(true);
                     viewHolder.checkBox.setImageResource(R.drawable.ic_baseline_check_24px);
+                    AccessibilityUtils.configureViewAccessibility(v)
+                            .setCustomAction(R.string.talkback_custom_action_unselect)
+                            .apply();
+                    v.announceForAccessibility(context.getString(R.string.talkback_custom_topping_selected, viewHolder.textView.getText()));
+
                 }
             }
         });

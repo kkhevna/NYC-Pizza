@@ -13,4 +13,6 @@
     <string name="talkback_custom_action_exit_and_place_order">exit and place order</string>
     <string name="talkback_custom_action_select">select</string>
     <string name="talkback_custom_action_unselect">un select</string>
+    <string name="talkback_custom_topping_selected">%s selected</string>
+    <string name="talkback_custom_topping_unselected">%s unselected</string>
 </resources>

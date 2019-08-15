@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -58,7 +59,12 @@ public class PlaceOrderActivity extends AppCompatActivity {
                 startActivityForResult(new Intent(PlaceOrderActivity.this, ToppingsListActivity.class), 0);
             }
         });
-        toppingsLayout.setContentDescription("Toppings " + toppingsValueTextView.getText() + "selected");
+        if (TextUtils.isEmpty(toppingsValueTextView.getText())) {
+            toppingsLayout.setContentDescription("No Toppings selected");
+
+        } else {
+            toppingsLayout.setContentDescription("Toppings " + toppingsValueTextView.getText() + " is selected");
+        }
         AccessibilityUtils.configureViewAccessibility(toppingsLayout)
                 .setCustomAction(R.string.talkback_custom_action_add_or_change_toppings)
                 .apply();
@@ -68,11 +74,11 @@ public class PlaceOrderActivity extends AppCompatActivity {
                 startActivityForResult(new Intent(PlaceOrderActivity.this, SizeListActivity.class), 0);
             }
         });
-        sizeLayout.setContentDescription("Pizza Size  " + sizeValueTextView.getText() + "selected");
+        sizeLayout.setContentDescription("Pizza Size  " + sizeValueTextView.getText() + " is selected");
         AccessibilityUtils.configureViewAccessibility(sizeLayout)
                 .setCustomAction(R.string.talkback_custom_action_change_size)
                 .apply();
-        sauceLayout.setContentDescription("Pizza Sauce  " + sauceValueTextView.getText() + "selected");
+        sauceLayout.setContentDescription("Pizza Sauce  " + sauceValueTextView.getText() + " is selected");
         sauceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
