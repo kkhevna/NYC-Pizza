@@ -13,6 +13,7 @@
         android:id="@+id/toppingName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="Name" />
 
     <View
@@ -22,8 +23,8 @@
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/toppingCheck"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@color/white"
         android:gravity="right"
         app:srcCompat="@drawable/baseline_uncheck"/>

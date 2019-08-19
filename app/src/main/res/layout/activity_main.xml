@@ -18,12 +18,13 @@
         android:layout_height="70dp"
         android:textStyle=""
         android:layout_below="@id/pizzaImage"
-        android:layout_marginLeft="100dp"
         android:layout_marginTop="52dp"
         android:background="@color/yellow"
+        android:layout_centerInParent="true"
         android:gravity="center"
         android:textColor="#ffffff"
         android:padding="20dp"
+        android:textSize="20sp"
         android:text="Create your own Pizza">
 
     </Button>
