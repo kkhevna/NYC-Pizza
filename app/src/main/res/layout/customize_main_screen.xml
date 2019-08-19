@@ -25,16 +25,18 @@
             android:id="@+id/sizeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Size"/>
+            android:textSize="18sp"
+            android:text="@string/size"/>
 
         <TextView
             android:id="@+id/sizeValueTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="280dp"
+            android:layout_marginLeft="250dp"
+            android:textSize="18sp"
             android:layout_toRightOf="@id/sizeTextView"
-            android:text="Large" />
+            android:text="@string/large" />
 
         <ImageView
             android:id="@+id/sizeChevron"
@@ -70,7 +72,8 @@
             android:id="@+id/sauceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sauce"/>
+            android:textSize="18sp"
+            android:text="@string/sauce"/>
 
         <TextView
             android:id="@+id/sauceValueTextView"
@@ -78,7 +81,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="250dp"
+            android:layout_marginLeft="230dp"
+            android:textSize="18sp"
             android:text="Tomato"/>
 
         <ImageView
@@ -116,18 +120,20 @@
             android:id="@+id/toppingsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toppings"/>
+            android:textSize="18sp"
+            android:text="@string/toppings"/>
 
         <TextView
             android:id="@+id/toppingsValueTextView"
             android:layout_toRightOf="@id/toppingsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="80dp"
             android:layout_marginRight="45dp"
             android:gravity="right"
-            android:text="Pepperoni"/>
+            android:text=""/>
 
         <ImageView
             android:id="@+id/toppingsChevron"
@@ -146,7 +152,8 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@color/yellow"
-        android:text="Review Order"
+        android:text="@string/review_order"
+        android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
         android:layout_centerInParent="true"

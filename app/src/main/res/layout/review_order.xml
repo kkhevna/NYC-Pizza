@@ -23,18 +23,20 @@
 
         <TextView
             android:id="@+id/sizeTextView"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Size"/>
+            android:text="@string/size"/>
 
         <TextView
             android:id="@+id/sizeValueTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="80dp"
             android:layout_marginRight="45dp"
             android:gravity="right"
+            android:textSize="18sp"
             android:layout_toRightOf="@id/sizeTextView"
             android:text="Large" />
 
@@ -62,17 +64,19 @@
 
         <TextView
             android:id="@+id/sauceTextView"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sauce"/>
+            android:text="@string/sauce"/>
 
         <TextView
             android:id="@+id/sauceValueTextView"
             android:layout_toRightOf="@id/sauceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="80dp"
             android:layout_marginRight="45dp"
             android:gravity="right"
             android:text="Tomato"/>
@@ -102,8 +106,9 @@
         <TextView
             android:id="@+id/toppingsTextView"
             android:layout_width="wrap_content"
+            android:textSize="18sp"
             android:layout_height="wrap_content"
-            android:text="Toppings"/>
+            android:text="@string/toppings"/>
 
         <TextView
             android:id="@+id/toppingsValueTextView"
@@ -111,8 +116,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="80dp"
             android:layout_marginRight="45dp"
+            android:textSize="18sp"
             android:gravity="right"
             android:text="Pepperoni, Pineapple"/>
 
@@ -146,14 +152,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Quantity"/>
+            android:textSize="18sp"
+            android:text="@string/quantity"/>
 
         <ImageView
             android:id="@+id/quantityMinus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24px"
-            android:layout_marginLeft="245dp"
+            android:layout_marginLeft="205dp"
             android:layout_marginRight="5dp"
             android:layout_toRightOf="@id/quantityTextView"
             />
@@ -164,12 +171,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
+            android:textSize="20sp"
             android:text="1"/>
 
         <ImageView
             android:id="@+id/quantityAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
@@ -199,6 +207,7 @@
         android:layout_below="@id/quantityView"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
+        android:textSize="20sp"
         android:text="Order Total : Free "/>
 
     <Button
@@ -206,8 +215,9 @@
         android:layout_height="wrap_content"
         android:background="@color/yellow"
         android:text="Place Order"
+        android:textSize="20sp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         android:layout_centerInParent="true"
         android:textColor="#ffffff" />
 

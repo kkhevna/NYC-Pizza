@@ -11,6 +11,7 @@
         android:id="@+id/sizeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:text="Size" />
 
     <TextView
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="250dp"
+        android:textSize="18sp"
         android:layout_toRightOf="@id/sizeTextView"
         android:text="Large" />
 
