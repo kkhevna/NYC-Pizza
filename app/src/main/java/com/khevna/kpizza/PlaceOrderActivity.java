@@ -24,6 +24,10 @@ public class PlaceOrderActivity extends AppCompatActivity {
     @BindView(R.id.toppingsValueTextView)
     protected TextView toppingsValueTextView;
 
+    @BindView(R.id.cheeseValueTextView)
+    protected TextView cheeseValueTextView;
+
+
     @BindView(R.id.SizeLayout)
     protected View sizeLayout;
 
@@ -32,6 +36,9 @@ public class PlaceOrderActivity extends AppCompatActivity {
 
     @BindView(R.id.toppingsLayout)
     protected View toppingsLayout;
+
+    @BindView(R.id.cheeseLayout)
+    protected View cheeseLayout;
 
     @BindView(R.id.reviewOrderButton)
     protected Button reviewOrderButton;
@@ -72,6 +79,13 @@ public class PlaceOrderActivity extends AppCompatActivity {
             }
         });
 
+        cheeseLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(PlaceOrderActivity.this, CheeseListActivity.class), 1);
+            }
+        });
+
         reviewOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +93,7 @@ public class PlaceOrderActivity extends AppCompatActivity {
                 intent.putExtra("Size", sizeValueTextView.getText());
                 intent.putExtra("Sauce", sauceValueTextView.getText());
                 intent.putExtra("Toppings", toppingsValueTextView.getText());
+                intent.putExtra("Cheese", cheeseValueTextView.getText());
                 startActivity(intent);
             }
         });
@@ -88,11 +103,20 @@ public class PlaceOrderActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (data != null) {
-            String message = data.getStringExtra("MESSAGE");
-            toppingsValueTextView.setText(message);
+        if (requestCode == 0) {
+            if (data != null) {
+                String message = data.getStringExtra("MESSAGE");
+                toppingsValueTextView.setText(message);
+            } else {
+                toppingsValueTextView.setText("Pepperoni");
+            }
         } else {
-            toppingsValueTextView.setText("Pepperoni");
+            if (data != null) {
+                String message = data.getStringExtra("CHEESE");
+                cheeseValueTextView.setText(message);
+            } else {
+                cheeseValueTextView.setText("Mozzarella");
+            }
         }
     }
 

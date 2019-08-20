@@ -21,6 +21,9 @@ public class ReviewOrder extends AppCompatActivity {
     @BindView(R.id.toppingsValueTextView)
     protected TextView toppingsValueTextView;
 
+    @BindView(R.id.cheeseValueTextView)
+    protected TextView cheeseValueTextView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,7 @@ public class ReviewOrder extends AppCompatActivity {
         sizeValueTextView.setText(i.getStringExtra("Size"));
         sauceValueTextView.setText(i.getStringExtra("Sauce"));
         toppingsValueTextView.setText(i.getStringExtra("Toppings"));
+        cheeseValueTextView.setText(i.getStringExtra("Cheese"));
 
     }
 

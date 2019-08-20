@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/nameValueLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:paddingLeft="10dp"
+    android:background="@color/white"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/cheeseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Name" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/cheeseCheck"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:gravity="right"
+        app:srcCompat="@drawable/baseline_uncheck"/>
+
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameValueLayout"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/lessCheese"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/less"
+            android:layout_centerVertical="true" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/cheeseSeekBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:maxHeight="5dp"
+            android:max="3"
+            android:progress="1"
+            android:layout_toRightOf="@id/lessCheese"
+            android:progressDrawable="@drawable/custom_seek_bar_progress_drawable"
+            android:thumb="@drawable/thumb_image" />
+
+        <TextView
+            android:id="@+id/moreCheese"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cheeseSeekBar"
+            android:layout_centerVertical="true"
+            android:text="@string/more" />
+
+    </RelativeLayout>
+
+</LinearLayout>

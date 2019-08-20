@@ -19,6 +19,7 @@
         <activity android:name=".ToppingsListActivity" />
         <activity android:name=".PlaceOrderActivity" />
         <activity android:name=".ReviewOrder" />
+        <activity android:name=".CheeseListActivity" />
     </application>
 
 </manifest>

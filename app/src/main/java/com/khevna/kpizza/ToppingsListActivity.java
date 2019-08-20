@@ -31,7 +31,6 @@ public class ToppingsListActivity extends AppCompatActivity {
         objects.add(new Toppings("Pepperoni"));
         objects.add(new Toppings("Peppers"));
         objects.add(new Toppings("Tomatoes"));
-        objects.add(new Toppings("Mozzarella"));
         ToppingsArrayAdapter arrayAdapter = new ToppingsArrayAdapter(this, R.layout.toppings_listview_item, objects);
         simpleList.setAdapter(arrayAdapter);
         setTitle("Select Pizza Toppings");
@@ -59,7 +58,7 @@ public class ToppingsListActivity extends AppCompatActivity {
         if (objects.get(0).isChecked()) {
             sb.append(objects.get(0).getToppings());
         }
-        for (int i = 1; i < 4; i++) {
+        for (int i = 1; i < 3; i++) {
             if (objects.get(i).isChecked()) {
                 if (sb.length() > 0) {
                     sb.append(", ");
