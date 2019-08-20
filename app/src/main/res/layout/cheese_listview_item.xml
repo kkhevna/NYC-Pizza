@@ -53,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/less"
+            android:importantForAccessibility="no"
             android:layout_centerVertical="true" />
 
         <android.support.v7.widget.AppCompatSeekBar
@@ -64,6 +65,7 @@
             android:maxHeight="5dp"
             android:max="3"
             android:progress="1"
+            android:importantForAccessibility="no"
             android:layout_toRightOf="@id/lessCheese"
             android:progressDrawable="@drawable/custom_seek_bar_progress_drawable"
             android:thumb="@drawable/thumb_image" />
@@ -74,6 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/cheeseSeekBar"
+            android:importantForAccessibility="no"
             android:layout_centerVertical="true"
             android:text="@string/more" />
 

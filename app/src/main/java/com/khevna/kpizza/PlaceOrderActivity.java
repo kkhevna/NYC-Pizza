@@ -50,6 +50,7 @@ public class PlaceOrderActivity extends AppCompatActivity {
         setContentView(R.layout.customize_main_screen);
         ButterKnife.bind(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeActionContentDescription(R.string.back);
         setTitle("Place Order");
 
     }
@@ -64,14 +65,21 @@ public class PlaceOrderActivity extends AppCompatActivity {
                 startActivityForResult(new Intent(PlaceOrderActivity.this, ToppingsListActivity.class), 0);
             }
         });
-
+        toppingsLayout.setContentDescription("Toppings " + toppingsValueTextView.getText() + "selected");
+        AccessibilityUtils.configureViewAccessibility(toppingsLayout)
+                .setCustomAction(R.string.talkback_custom_action_add_or_change_toppings)
+                .apply();
         sizeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivityForResult(new Intent(PlaceOrderActivity.this, SizeListActivity.class), 0);
             }
         });
-
+        sizeLayout.setContentDescription("Pizza Size  " + sizeValueTextView.getText() + " selected");
+        AccessibilityUtils.configureViewAccessibility(sizeLayout)
+                .setCustomAction(R.string.talkback_custom_action_change_size)
+                .apply();
+        sauceLayout.setContentDescription("Pizza Sauce  " + sauceValueTextView.getText() + " selected");
         sauceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,13 +87,22 @@ public class PlaceOrderActivity extends AppCompatActivity {
             }
         });
 
+
         cheeseLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivityForResult(new Intent(PlaceOrderActivity.this, CheeseListActivity.class), 1);
             }
         });
+        cheeseLayout.setContentDescription("Cheese " + toppingsValueTextView.getText() + " selected");
+        AccessibilityUtils.configureViewAccessibility(toppingsLayout)
+                .setCustomAction(R.string.talkback_custom_action_add_or_change_toppings)
+                .apply();
 
+
+        AccessibilityUtils.configureViewAccessibility(sauceLayout)
+                .setCustomAction(R.string.talkback_custom_action_change_sauce)
+                .apply();
         reviewOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,7 +114,9 @@ public class PlaceOrderActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        AccessibilityUtils.configureViewAccessibility(reviewOrderButton)
+                .setCustomAction(R.string.talkback_custom_action_review_order)
+                .apply();
     }
 
     @Override

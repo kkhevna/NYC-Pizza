@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        createYourPizzaButton.setContentDescription("Create your own Pizza");
+        AccessibilityUtils.configureViewAccessibility(createYourPizzaButton)
+                .setCustomAction(R.string.talkback_custom_action_place_order)
+                .apply();
 
         createYourPizzaButton.setOnClickListener(new View.OnClickListener() {
             @Override

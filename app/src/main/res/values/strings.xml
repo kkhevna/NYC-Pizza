@@ -6,6 +6,7 @@
     <string name="back">back</string>
     <string name="talkback_custom_action_go_to_previous_screen">go to previous screen</string>
     <string name="talkback_custom_action_add_or_change_toppings">add or change toppings</string>
+    <string name="talkback_custom_action_change_cheese">change cheese </string>
     <string name="talkback_custom_action_change_size">change size</string>
     <string name="talkback_custom_action_change_sauce">change sauce</string>
     <string name="talkback_custom_action_order">order</string>
@@ -25,4 +26,5 @@
     <string name="done">Done</string>
     <string name="less">Less</string>
     <string name="more">More</string>
+
 </resources>

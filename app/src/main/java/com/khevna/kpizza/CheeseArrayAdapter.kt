@@ -58,30 +58,45 @@ class CheeseArrayAdapter(internal var context: Context, resource: Int, internal 
             viewHolder.textView!!.text = data.cheeseType
 
 
-            setOnClickListener {
+            convertView.setOnClickListener {v ->
 
                             if (data.isChecked) {
                                 data.isChecked = false
                                 viewHolder.checkBox?.setImageResource(R.drawable.baseline_uncheck)
-                //                v.configureViewAccessibility()
-                //                        .setCustomAction(R.string.talkback_custom_action_select)
-                //                        .apply()
-                //                v.announceForAccessibility(context.getString(R.string.talkback_custom_topping_unselected, viewHolder.textView?.text))
+                                v.configureViewAccessibility()
+                                        .setCustomAction(R.string.talkback_custom_action_select)
+                                        .apply()
+                                v.announceForAccessibility(context.getString(R.string.talkback_custom_topping_unselected, viewHolder.textView?.text))
                             } else {
                                 data.isChecked = true
                                 viewHolder.checkBox?.setImageResource(R.drawable.ic_baseline_check_24px)
-                //                v.configureViewAccessibility()
-                //                        .setCustomAction(R.string.talkback_custom_action_unselect)
-                //                        .apply()
-                //                v.announceForAccessibility(context.getString(R.string.talkback_custom_topping_selected, viewHolder.textView?.text))
+                                v.configureViewAccessibility()
+                                        .setCustomAction(R.string.talkback_custom_action_unselect)
+                                        .apply()
+                                v.announceForAccessibility(context.getString(R.string.talkback_custom_topping_selected, viewHolder.textView?.text))
+                                viewHolder.lessCheese?.importantForAccessibility = 1
+                                viewHolder.moreCheese?.importantForAccessibility = 1
 
                             }
             }
         }
 
-//        convertView.configureViewAccessibility()
-//                .setCustomAction(if (data.isChecked) R.string.talkback_custom_action_unselect else R.string.talkback_custom_action_select)
-//                .apply()
+        convertView.configureViewAccessibility()
+                .setCustomAction(if (data.isChecked) R.string.talkback_custom_action_unselect else R.string.talkback_custom_action_select)
+                .apply()
+
+
+
+        viewHolder.lessCheese?.contentDescription = "Reduce cheese button"
+        viewHolder.moreCheese?.contentDescription = "Add more cheese button"
+
+        viewHolder.lessCheese?.configureViewAccessibility()
+                ?.setCustomAction("reduce cheese ")
+                ?.apply()
+
+        viewHolder.moreCheese?.configureViewAccessibility()
+                ?.setCustomAction("add more cheese ")
+                ?.apply()
 
         viewHolder.lessCheese?.setOnClickListener { v ->
             if (viewHolder.seekBar?.progress != 0) {
